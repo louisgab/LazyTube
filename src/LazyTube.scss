@@ -1,0 +1,61 @@
+.js-lazytube {
+    background-color: #000;
+    overflow: hidden;
+    cursor: pointer;
+    margin: auto;
+    position: relative;
+    display: block;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0.7;
+        transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1);
+        &.fadeout {
+            opacity: 0;
+        }
+    }
+
+    button {
+        width: 68px;
+        height: 48px;
+        cursor: pointer;
+        outline: 0;
+        border: none;
+        background-color: transparent;
+        background-color: #212121;
+        transition: background-color 0.1s cubic-bezier(0.4, 0, 1, 1), opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        opacity: 0.8;
+        border-radius: 6px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        position: absolute;
+        &:before {
+            content: '';
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            position: absolute;
+        }
+    }
+
+    &:hover button {
+        background-color: #f00;
+        opacity: 1;
+    }
+
+    iframe {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
